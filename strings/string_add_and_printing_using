@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    char str[]="Hello World";//One method to store a string
+    char *ptr=str;
+    printf("Character is:");
+    for(int i=0;i<sizeof(str)-1;i++)//sizeof(str)-1 because i don't want to print null character
+    {
+        printf("%c",*(ptr+i));
+    }
+     
+    printf("\nAddress is:");
+    for(int i=0;i<sizeof(str);i++)
+    {
+        printf("%u\t",(ptr+i));
+    }
+}
